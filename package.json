@@ -1,0 +1,23 @@
+{
+  "name": "mercado-liebre",
+  "version": "1.0.0",
+  "description": "Enmaquetado HTML-CSS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CDarioB/mercado-liebre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CDarioB/mercado-liebre/issues"
+  },
+  "homepage": "https://github.com/CDarioB/mercado-liebre#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
