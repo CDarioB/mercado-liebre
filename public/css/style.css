@@ -1,4 +1,6 @@
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -7,8 +9,6 @@ body{
     font-weight: 100;
     font-size: 12px;
     background-color: #ebebeb;
-    margin: 0px;
-    padding: 0px;
 }
 
 /* ************************* */
@@ -116,20 +116,53 @@ article img {
 
 .product-detail{
     width: 90%;
-    border-top: solid 1px #ebebeb;
+    border-top: 1px solid #ebebeb;
     background-color: white;
     padding: 0px 15px;
     margin: 0px;
 }
 
 .fa-truck {
-    color: #39b54a; /*#2b7434*/
-    margin-top: 1px;
+    color: #39b54a;
+    margin-top: 5px;
+    font-size: 16px;
+    display: block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    left: 450px;
+    /*right: 20px;*/
+    top: -21px;
+}
+
+/*main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}*/
+
+.price-discount {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 
 p.price{
     font-size: 18px;
     margin: 10px 0px 0px 0px;
+    flex: 30 0 0;
 }
 
 p.discount, p.description{
@@ -139,6 +172,7 @@ p.discount, p.description{
 p.discount{
     color: #39b54a;
     margin: 0px 0px;
+    flex: 70 0 0;
 }
 
 p.description{
@@ -150,7 +184,7 @@ p.description{
 
 /* ***** footer config ***** */
 footer {
-    width: 100vw;
+    width: 85vw;
     background-color: white;
     color: #666;
     text-align: center;
