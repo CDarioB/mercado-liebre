@@ -114,12 +114,19 @@ article img {
     width: 90%;
 }
 
-.product-detail{
+.product-detail {
+    /*display: flex;
+    flex-wrap: wrap;*/
+    /*position: relative;*/
     width: 90%;
     border-top: 1px solid #ebebeb;
     background-color: white;
     padding: 0px 15px;
     margin: 0px;
+}
+
+.img-truck{
+    position: relative;
 }
 
 .fa-truck {
@@ -133,10 +140,9 @@ article img {
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: relative;
-    left: 450px;
-    /*right: 20px;*/
-    top: -21px;
+    position: absolute;
+    right: 1px;
+    top: -20px;
 }
 
 /*main section article i {
