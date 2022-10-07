@@ -1,28 +1,25 @@
-const express = require ('express') 
-const path = require ('path') 
+const EXPRESS = require ('express') 
+const PATH = require ('path') 
 
-const app = express();
+const PORT = process.env.PORT || 3001;
+const HOST = process.env.DB_HOST = process.env.DB_HOST || 'http://localhost';
 
-const publicPath = path.resolve(__dirname,'./public');
-app.use(express.static(publicPath));
+const PUBLIC_PATH = PATH.resolve(__dirname,'./public');
+const APP = EXPRESS();
 
-//const PORT = process.env.PORT || 3000;
+APP.use(EXPRESS.static(PUBLIC_PATH));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/home.html'))
+APP.get('/', (req, res) => {
+    res.sendFile(PATH.resolve(__dirname, './views/home.html'))
 });
 
-app.get("/register", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./views/register.html"))
+APP.get("/register", (req, res) => {
+    res.sendFile(PATH.resolve(__dirname, "./views/register.html"))
 });
 
-app.get("/login", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
+APP.get("/login", (req, res) => {
+    res.sendFile(PATH.resolve(__dirname, "./views/login.html"))
 });
 
 
-app.listen (3030, () => console.log ("Server started: http://localhost:3030/") ); 
-
-// app.listen (PORT, () => console.log (`Server started: port ${PORT}`) ); 
-
-// html tag wrapper
+APP.listen (PORT, () => console.log (`Server started: ${HOST}:${PORT}/ `) ); 
