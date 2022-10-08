@@ -2,7 +2,7 @@ const EXPRESS = require ('express')
 const PATH = require ('path') 
 
 const PORT = process.env.PORT || 3001;
-const HOST = process.env.DB_HOST = process.env.DB_HOST || 'http://localhost';
+
 
 const PUBLIC_PATH = PATH.resolve(__dirname,'./public');
 const APP = EXPRESS();
@@ -22,4 +22,4 @@ APP.get("/login", (req, res) => {
 });
 
 
-APP.listen (PORT, () => console.log (`Server started: ${HOST}:${PORT}/ `) ); 
+APP.listen (PORT, () => console.log (`Server started: port ${PORT} `) ); 
