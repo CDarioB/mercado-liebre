@@ -37,7 +37,7 @@ header {
 
 /* ****** main config ****** */
 .main-login-body, .main-register-body {
-   width: 90%;
+   width: 90vw;
    min-height: 50vh;
    background-color: #ebebeb;
    display: flex;

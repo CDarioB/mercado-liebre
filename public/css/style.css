@@ -8,6 +8,7 @@
 
 body{
     min-height: 100vh;
+    max-width: 100vw;
     font-size: 12px;
     background-color: #ebebeb;
 }
@@ -102,6 +103,7 @@ main {
     width: 90vw;
     margin: auto;
 }
+
 .main-div-title {
     width: 85.5vw;
 }
@@ -242,10 +244,6 @@ footer {
     text-align: center;
     padding: 0px;
     padding: 0 50px 50px 50px;
-    /*padding-top: 50px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;*/
     margin: 0px;
 }
 
@@ -286,22 +284,86 @@ p.copyrigth{
 
 
 /* 0-480: smaller smartphones */
-@media (min-width: 361px) {
+@media (max-width: 480px) { /*(min-width: 361px) */
+    header {
+        width: 80vw;
+        height: 25vh;
+        background-color: #EAC926; 
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .banner{
+        width: 81.5vw;
+        height: 7vh;
+        position: absolute;
+        top: 85%;
+        left: 6%;
+        margin: -1.5rem 0 0 -1.5rem;
+    }
+    
+    .header-main .logo img {
+        display: block;
+        width: 75vw; 
+        padding: 1rem 5rem;
+    }
+    
+    .search {
+       display: flex;
+       flex-wrap: row;
+       width: 20px;
+       height: 20px;
+      /* acomodar vertical y horizontalmente */
+       position: absolute;
+       top: 42.5%;
+       left: 30%;
+       margin: -1.5rem 0 0 -1.5rem;
+    }
+
+    .buy-outs{
+        position: absolute;
+        top: 55%;
+        left: 20%;
+        margin: -1.5rem 0 0 -1.5rem;
+    }
+    
+    .burger-menu {
+        position: absolute;
+        top: 62.5%;
+        left: 55.5%;
+        margin: -1.5rem 0 0 -1.5rem;
+    }
+    
+    .main-div-title {
+        width: 75vw;
+    }
+
     main article:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 1rem rgb(100, 100, 100);
     }
 
     .description {
         display: none;
     }
-
-    /*.burger-menu {
-        display: none;
-     } */
 }
 
 /* 481-768: tablets & lager smartphones */
-@media (min-width:481px) {
+@media (min-width:481px) and (min-width:584px) {
+    .logo {
+        width: 50%; 
+        padding: 10px 0px;
+        flex: 50 0 0;
+    }
+    
+    .search {
+        display: flex;
+        flex-wrap: row;
+        width: 20px;
+        height: 40px;
+        flex: 50 0 0; 
+        padding: 10px 0px 0px 30px;
+    }
+    
     main section article {
        display: inline-block;
        margin: auto;
@@ -309,9 +371,58 @@ p.copyrigth{
        width: 45%;
     }
 }
+@media (min-width:585px) { /*and (max-width: 768px) {*/
+    .logo {
+        width: 30%; 
+        padding: 10px 0px;
+        flex: 33.33 0 0;
+    }
+    
+    .header-main .logo img {
+        width: 10rem;
+    }
+
+    .search {
+        display: flex;
+        flex-wrap: row;
+        flex: 33.33 0 0; 
+        padding: 10px 0px 0px 20px;
+    }
+
+    .buy-outs{
+        padding: 10px 0px 0px 40px;
+        flex: 33.33 0 0; 
+    }
+    
+}
 
  /* 769-1279: Laptoos, larger tablets in landscape, & small smartphones */
-@media (min-width:769px) {
+@media (min-width:769px) { /*and (max-width: 850px) {*/
+    .logo {
+        width: 30%; 
+        padding: 10px 0px;
+        flex: 33.33 0 0;
+    }
+    
+    .header-main .logo img {
+        width: 15rem;
+    }
+
+    .search {
+        display: flex;
+        flex-wrap: row;
+        font-size: 12px;
+        flex: 33.33 0 0; 
+        padding: 10px 0px 0px 50px;
+
+    }
+
+    .buy-outs{
+        margin: 0px;
+        padding: 10px 0px 0px 0px;
+        flex: 33.33 0 0; 
+    }
+
     nav {
        display: flex;
        flex-direction: row;
